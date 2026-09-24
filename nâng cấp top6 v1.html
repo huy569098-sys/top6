@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Top 6 Hybrid - 3 Hot + 3 Cycle</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+header{
+    padding:28px 20px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#dc2626,#ea580c,#2563eb);
+}
+
+header h1{
+    margin:0 0 8px;
+}
+
+header p{
+    margin:0;
+    opacity:.92;
+}
+
+main{
+    max-width:1500px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+h2{
+    margin-top:0;
+}
+
+textarea{
+    width:100%;
+    min-height:420px;
+    padding:14px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    resize:vertical;
+    font-family:Consolas,monospace;
+    font-size:14px;
+}
+
+button{
+    border:none;
+    border-radius:8px;
+    padding:12px 18px;
+    margin:10px 8px 0 0;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.88;
+}
+
+.blue{background:#2563eb;}
+.green{background:#059669;}
+.orange{background:#ea580c;}
+.red{background:#dc2626;}
+
+.info{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:14px;
+    border-radius:8px;
+    line-height:1.7;
+}
+
+.success{
+    margin-top:15px;
+    padding:14px;
+    border-radius:8px;
+    background:#ecfdf5;
+    color:#065f46;
+    border-left:5px solid #059669;
+}
+
+.error{
+    margin-top:15px;
+    padding:14px;
+    border-radius:8px;
+    background:#fef2f2;
+    color:#991b1b;
+    border-left:5px solid #dc2626;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;
+}
+
+.stat{
+    padding:16px;
+    border-radius:10px;
+    border:1px solid #e2e8f0;
+    background:#f8fafc;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    margin-top:7px;
+    font-size:25px;
+    color:#4f46e5;
+}
+
+.day{
+    padding:14px;
+    margin-bottom:12px;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    background:#f8fafc;
+}
+
+.day-title{
+    font-weight:bold;
+    color:#4f46e5;
+    margin-bottom:8px;
+}
+
+.prize-name{
+    display:inline-block;
+    width:115px;
+    font-weight:bold;
+}
+
+.badge{
+    display:inline-block;
+    padding:3px 7px;
+    margin:2px;
+    border-radius:5px;
+    background:#e0e7ff;
+    font-family:Consolas,monospace;
+}
+
+.top-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:14px;
+}
+
+.top-item{
+    padding:18px;
+    text-align:center;
+    border-radius:12px;
+    border:1px solid #cbd5e1;
+    background:#f8fafc;
+}
+
+.hot-item{
+    border-color:#fdba74;
+    background:#fff7ed;
+}
+
+.cycle-item{
+    border-color:#93c5fd;
+    background:#eff6ff;
+}
+
+.type{
+    font-size:13px;
+    font-weight:bold;
+}
+
+.hot{
+    color:#c2410c;
+}
+
+.cycle{
+    color:#1d4ed8;
+}
+
+.number{
+    font-size:42px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.small{
+    font-size:12px;
+    color:#64748b;
+}
+
+.scroll{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    min-width:1000px;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border-bottom:1px solid #e2e8f0;
+    text-align:center;
+}
+
+th{
+    background:#f8fafc;
+}
+
+.actual{
+    max-width:420px;
+    font-family:Consolas,monospace;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Top 6 Hybrid</h1>
+    <p>🔥 3 Hot + 🔄 3 Cycle | Tự sắp xếp theo ngày | 27 giải → đuôi 2 số</p>
+</header>
+
+<main>
+
+<div class="card">
+    <div class="info">
+        <b>Mô hình Hybrid:</b><br>
+        🔥 <b>3 Hot</b>: Momentum + tần suất gần + xu hướng tăng.<br>
+        🔄 <b>3 Cycle</b>: Chu kỳ + khoảng trống + độ ổn định.<br><br>
+        Có thể dán <b>ngày mới nhất ở trên → ngày cũ hơn ở dưới</b>.<br>
+        Công cụ tự đọc ngày tháng và sắp xếp đúng trước khi phân tích.
+    </div>
+</div>
+
+<div class="card">
+
+    <h2>Dữ liệu lịch sử</h2>
+
+    <textarea id="inputData"
+    placeholder="Dán dữ liệu ngày mới nhất ở trên → ngày cũ hơn ở dưới. Công cụ tự đọc ngày tháng..."></textarea>
+
+    <br>
+
+    <button class="blue" onclick="checkData()">Kiểm tra dữ liệu</button>
+    <button class="green" onclick="analyze()">Phân tích Top 6 Hybrid</button>
+    <button class="orange" onclick="backtest()">Chạy Backtest</button>
+    <button class="red" onclick="clearAll()">Xóa toàn bộ</button>
+
+    <div id="status"></div>
+
+</div>
+
+<div class="card">
+
+    <h2>Thông tin dữ liệu</h2>
+
+    <div id="infoArea" class="grid">
+        <div class="stat">Chưa có dữ liệu</div>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Dữ liệu sau khi nhận dạng</h2>
+
+    <div id="preview">Chưa kiểm tra dữ liệu.</div>
+
+</div>
+
+<div class="card">
+
+    <h2>🔥 Top 3 Hot</h2>
+
+    <div id="hotResult" class="top-grid">
+        Chưa phân tích.
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>🔄 Top 3 Cycle</h2>
+
+    <div id="cycleResult" class="top-grid">
+        Chưa phân tích.
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Top 6 tổng hợp</h2>
+
+    <div id="topResult" class="top-grid">
+        Chưa phân tích.
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Chi tiết điểm</h2>
+
+    <div class="scroll">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Loại</th>
+                    <th>Hạng</th>
+                    <th>Số</th>
+                    <th>Điểm Hybrid</th>
+                    <th>Momentum</th>
+                    <th>Recent</th>
+                    <th>Trend</th>
+                    <th>Cycle</th>
+                    <th>Gap</th>
+                    <th>Stability</th>
+                </tr>
+            </thead>
+
+            <tbody id="detailResult">
+                <tr>
+                    <td colspan="10">Chưa phân tích</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Backtest</h2>
+
+    <div id="backtestResult">
+        Chưa chạy Backtest.
+    </div>
+
+</div>
+
+</main>
+
+<script>
+
+/* =====================================================
+CẤU TRÚC 27 GIẢI
+===================================================== */
+
+const PRIZES = [
+    {name:"Đặc biệt", count:1, length:5},
+    {name:"Giải nhất", count:1, length:5},
+    {name:"Giải nhì", count:2, length:5},
+    {name:"Giải ba", count:6, length:5},
+    {name:"Giải tư", count:4, length:4},
+    {name:"Giải năm", count:6, length:4},
+    {name:"Giải sáu", count:3, length:3},
+    {name:"Giải bảy", count:4, length:2}
+];
+
+
+/* =====================================================
+THÔNG BÁO
+===================================================== */
+
+function setStatus(message,type){
+
+    const el=document.getElementById("status");
+
+    el.className=type;
+
+    el.textContent=message;
+}
+
+
+/* =====================================================
+LÀM SẠCH INPUT
+===================================================== */
+
+function cleanInput(text){
+
+    return String(text||"")
+        .replace(/&#x9;/gi,"\n")
+        .replace(/&nbsp;/gi," ")
+        .replace(/<br\s*\/?>/gi,"\n")
+        .replace(/<\/?[^>]+>/gi,"\n")
+        .replace(/\r/g,"\n")
+        .replace(/\t/g,"\n");
+}
+
+
+/* =====================================================
+TÁCH SỐ CỐ ĐỊNH
+===================================================== */
+
+function splitFixed(digits,length,count){
+
+    const result=[];
+
+    for(let i=0;i<count;i++){
+
+        const start=i*length;
+
+        const value=digits.substring(
+            start,
+            start+length
+        );
+
+        if(value.length===length){
+            result.push(value);
+        }
+    }
+
+    return result;
+}
+
+
+/* =====================================================
+PARSE 1 NGÀY
+===================================================== */
+
+function parseDay(block){
+
+    const day={
+        prizes:{},
+        numbers:[]
+    };
+
+    for(let i=0;i<PRIZES.length;i++){
+
+        const prize=PRIZES[i];
+
+        const regex=new RegExp(
+            prize.name,
+            "i"
+        );
+
+        const match=regex.exec(block);
+
+        if(!match){
+
+            day.prizes[prize.name]=[];
+
+            continue;
+        }
+
+        const start=
+            match.index+
+            match[0].length;
+
+        let end=block.length;
+
+        for(let j=i+1;j<PRIZES.length;j++){
+
+            const nextRegex=
+                new RegExp(
+                    PRIZES[j].name,
+                    "i"
+                );
+
+            const nextMatch=
+                nextRegex.exec(block);
+
+            if(
+                nextMatch &&
+                nextMatch.index>start
+            ){
+                end=nextMatch.index;
+                break;
+            }
+        }
+
+        const section=
+            block.substring(
+                start,
+                end
+            );
+
+        const matches=
+            section.match(/\d+/g);
+
+        const digits=
+            matches
+            ? matches.join("")
+            : "";
+
+        const needed=
+            prize.count*
+            prize.length;
+
+        const values=
+            splitFixed(
+                digits.substring(0,needed),
+                prize.length,
+                prize.count
+            );
+
+        day.prizes[prize.name]=values;
+
+        values.forEach(value=>{
+            day.numbers.push(value);
+        });
+    }
+
+    return day;
+}
+
+
+function parseDateFromText(text){
+
+    const matches=[
+        ...String(text||"")
+        .matchAll(
+            /(\d{1,2})\s*[-\/]\s*(\d{1,2})\s*[-\/]\s*(\d{4})/g
+        )
+    ];
+
+    if(!matches.length){
+        return null;
+    }
+
+    const m=matches[matches.length-1];
+    const day=Number(m[1]);
+    const month=Number(m[2]);
+    const year=Number(m[3]);
+    const date=new Date(
+        Date.UTC(year,month-1,day)
+    );
+
+    if(
+        date.getUTCFullYear()!==year||
+        date.getUTCMonth()!==month-1||
+        date.getUTCDate()!==day
+    ){
+        return null;
+    }
+
+    return date;
+}
+
+
+function addDateDays(date,amount){
+
+    const result=new Date(date);
+    result.setUTCDate(
+        result.getUTCDate()+amount
+    );
+    return result;
+}
+
+
+function formatDate(date){
+
+    if(!(date instanceof Date)){
+        return "Không rõ ngày";
+    }
+
+    return [
+        String(date.getUTCDate()).padStart(2,"0"),
+        String(date.getUTCMonth()+1).padStart(2,"0"),
+        date.getUTCFullYear()
+    ].join("-");
+}
+
+
+/* =====================================================
+LẤY DANH SÁCH NGÀY
+TỰ SẮP XẾP CŨ → MỚI
+===================================================== */
+
+function getDays(){
+
+    const raw=
+        document.getElementById(
+            "inputData"
+        ).value;
+
+    const clean=
+        cleanInput(raw);
+
+    const positions=[];
+    const marker=/Đặc biệt/gi;
+    let markerMatch;
+
+    while(
+        (markerMatch=marker.exec(clean))
+    ){
+        positions.push(markerMatch.index);
+    }
+
+    const days=[];
+
+    positions.forEach((start,index)=>{
+
+        const end=
+            index+1<positions.length
+            ?positions[index+1]
+            :clean.length;
+
+        const contextStart=
+            index===0
+            ?0
+            :positions[index-1];
+
+        const dateContext=
+            clean.substring(
+                contextStart,
+                start
+            );
+
+        let block=
+            clean.substring(
+                start,
+                end
+            );
+
+        /* Bỏ bảng Đầu – Lô tô để không đọc trùng. */
+        block=block.split(
+            /Đầu\s*Lô\s*tô/i
+        )[0].trim();
+
+        const day=parseDay(block);
+        day.date=parseDateFromText(dateContext);
+        day.dateInferred=false;
+        day.sourceIndex=index;
+
+        if(day.numbers.length>0){
+            days.push(day);
+        }
+    });
+
+    const known=days.filter(day=>day.date);
+    let direction=-1;
+
+    if(known.length>=2){
+        direction=
+            known[1].date>known[0].date
+            ?1
+            :-1;
+    }
+
+    days.forEach((day,index)=>{
+
+        if(day.date){
+            return;
+        }
+
+        let next=index+1;
+
+        while(
+            next<days.length&&
+            !days[next].date
+        ){
+            next++;
+        }
+
+        if(next<days.length){
+            day.date=addDateDays(
+                days[next].date,
+                -direction*(next-index)
+            );
+            day.dateInferred=true;
+            return;
+        }
+
+        let previous=index-1;
+
+        while(
+            previous>=0&&
+            !days[previous].date
+        ){
+            previous--;
+        }
+
+        if(previous>=0){
+            day.date=addDateDays(
+                days[previous].date,
+                direction*(index-previous)
+            );
+            day.dateInferred=true;
+        }
+    });
+
+    if(days.some(day=>day.date)){
+        days.sort((a,b)=>{
+            if(a.date&&b.date){
+                return a.date-b.date;
+            }
+            if(a.date)return -1;
+            if(b.date)return 1;
+            return b.sourceIndex-a.sourceIndex;
+        });
+    }else{
+        /* Không có ngày: mặc định ngày mới được dán ở trên. */
+        days.reverse();
+    }
+
+    return days;
+}
+
+
+/* =====================================================
+LẤY 2 ĐUÔI
+===================================================== */
+
+function getTails(day){
+
+    if(
+        !day ||
+        !Array.isArray(day.numbers)
+    ){
+        return [];
+    }
+
+    return day.numbers
+        .filter(number=>
+            typeof number==="string" &&
+            number.length>=2
+        )
+        .map(number=>
+            number.slice(-2)
+        );
+}
+
+
+/* =====================================================
+KIỂM TRA DỮ LIỆU
+===================================================== */
+
+function checkData(){
+
+    try{
+
+        const days=getDays();
+
+        if(days.length===0){
+            throw new Error(
+                "Không tìm thấy dữ liệu."
+            );
+        }
+
+        const complete=
+            days.filter(
+                d=>d.numbers.length===27
+            ).length;
+
+        document.getElementById(
+            "infoArea"
+        ).innerHTML=`
+
+            <div class="stat">
+                Số ngày
+                <strong>${days.length}</strong>
+            </div>
+
+            <div class="stat">
+                Đủ 27 giải
+                <strong>${complete}</strong>
+            </div>
+
+            <div class="stat">
+                Thứ tự
+                <strong>Tự sắp xếp theo ngày</strong>
+            </div>
+        `;
+
+        let html="";
+
+        days.forEach((day,index)=>{
+
+            html+=`
+
+                <div class="day">
+
+                    <div class="day-title">
+
+                        ${day.date
+                            ?formatDate(day.date)+
+                                (day.dateInferred?" (suy ra)":"")
+                            :`Ngày ${index+1}`}
+
+                        ${index===0?"(CŨ NHẤT)":""}
+
+                        ${index===days.length-1?"(MỚI NHẤT)":""}
+
+                        — ${day.numbers.length}/27 giải
+
+                    </div>
+            `;
+
+            PRIZES.forEach(prize=>{
+
+                const values=
+                    day.prizes[
+                        prize.name
+                    ]||[];
+
+                html+=`
+                    <div>
+                        <span class="prize-name">
+                            ${prize.name}:
+                        </span>
+                `;
+
+                values.forEach(value=>{
+                    html+=`
+                        <span class="badge">
+                            ${value}
+                        </span>
+                    `;
+                });
+
+                html+="</div>";
+            });
+
+            html+="</div>";
+        });
+
+        document.getElementById(
+            "preview"
+        ).innerHTML=html;
+
+        if(complete===days.length){
+
+            setStatus(
+                `Dữ liệu hợp lệ: ${days.length} ngày, tất cả đều đủ 27 giải.`,
+                "success"
+            );
+
+        }else{
+
+            setStatus(
+                `Có ${days.length-complete} ngày chưa đủ 27 giải.`,
+                "error"
+            );
+        }
+
+    }catch(error){
+
+        setStatus(
+            "Lỗi: "+error.message,
+            "error"
+        );
+    }
+}
+
+
+/* =====================================================
+KHỞI TẠO 00 → 99
+===================================================== */
+
+function createMap(){
+
+    const map={};
+
+    for(let i=0;i<100;i++){
+
+        const number=
+            String(i).padStart(2,"0");
+
+        map[number]={
+            number:number,
+
+            momentum:0,
+            recent:0,
+            trend:0,
+
+            cycle:0,
+            gap:0,
+            stability:0,
+
+            hotScore:0,
+            cycleScore:0
+        };
+    }
+
+    return map;
+}
+
+
+/* =====================================================
+CHUẨN HÓA
+===================================================== */
+
+function normalize(map,key){
+
+    const values=
+        Object.values(map)
+        .map(x=>Number(x[key]))
+        .filter(Number.isFinite);
+
+    if(values.length===0){
+        return;
+    }
+
+    const min=Math.min(...values);
+    const max=Math.max(...values);
+
+    Object.values(map).forEach(item=>{
+
+        const value=
+            Number(item[key]);
+
+        if(
+            !Number.isFinite(value) ||
+            max===min
+        ){
+            item[key]=0;
+        }else{
+            item[key]=
+                (value-min)/
+                (max-min);
+        }
+    });
+}
+
+
+/* =====================================================
+ĐẾM TRONG N NGÀY
+===================================================== */
+
+function countInLastDays(
+    history,
+    number,
+    daysCount
+){
+
+    const start=
+        Math.max(
+            0,
+            history.length-daysCount
+        );
+
+    let count=0;
+
+    for(let i=start;i<history.length;i++){
+
+        getTails(history[i])
+        .forEach(tail=>{
+
+            if(tail===number){
+                count++;
+            }
+        });
+    }
+
+    return count;
+}
+
+
+/* =====================================================
+MOMENTUM
+===================================================== */
+
+function calculateMomentum(
+    history,
+    number
+){
+
+    const totalDays=
+        history.length;
+
+    if(totalDays===0){
+        return 0;
+    }
+
+    const base=
+        countInLastDays(
+            history,
+            number,
+            totalDays
+        )/totalDays;
+
+    if(base<=0){
+        return 0;
+    }
+
+    const windows=[
+        {days:3,weight:.45},
+        {days:7,weight:.35},
+        {days:14,weight:.20}
+    ];
+
+    let score=0;
+
+    windows.forEach(w=>{
+
+        const actualDays=
+            Math.min(
+                w.days,
+                totalDays
+            );
+
+        const recent=
+            countInLastDays(
+                history,
+                number,
+                actualDays
+            )/
+            actualDays;
+
+        score+=
+            (
+                recent/base
+            )*
+            w.weight;
+    });
+
+    return Number.isFinite(score)
+        ?score
+        :0;
+}
+
+
+/* =====================================================
+RECENT FREQUENCY
+===================================================== */
+
+function calculateRecent(
+    history,
+    number
+){
+
+    const windows=[
+        {days:3,weight:.50},
+        {days:7,weight:.30},
+        {days:14,weight:.20}
+    ];
+
+    let score=0;
+
+    windows.forEach(w=>{
+
+        const days=
+            Math.min(
+                w.days,
+                history.length
+            );
+
+        if(days<=0){
+            return;
+        }
+
+        const count=
+            countInLastDays(
+                history,
+                number,
+                days
+            );
+
+        score+=
+            (
+                count/days
+            )*
+            w.weight;
+    });
+
+    return Number.isFinite(score)
+        ?score
+        :0;
+}
+
+
+/* =====================================================
+TREND
+
+So sánh 5 ngày gần với
+5 ngày trước đó
+===================================================== */
+
+function calculateTrend(
+    history,
+    number
+){
+
+    if(history.length<6){
+        return 0;
+    }
+
+    const recentDays=
+        Math.min(
+            5,
+            history.length
+        );
+
+    const previousStart=
+        Math.max(
+            0,
+            history.length-
+            recentDays*2
+        );
+
+    const previousEnd=
+        history.length-
+        recentDays;
+
+    let recent=0;
+    let previous=0;
+
+    for(
+        let i=history.length-recentDays;
+        i<history.length;
+        i++
+    ){
+
+        getTails(history[i])
+        .forEach(t=>{
+
+            if(t===number){
+                recent++;
+            }
+        });
+    }
+
+    for(
+        let i=previousStart;
+        i<previousEnd;
+        i++
+    ){
+
+        getTails(history[i])
+        .forEach(t=>{
+
+            if(t===number){
+                previous++;
+            }
+        });
+    }
+
+    const score=
+        recent-
+        previous;
+
+    return Number.isFinite(score)
+        ?score
+        :0;
+}
+
+
+/* =====================================================
+LẤY CÁC NGÀY XUẤT HIỆN
+===================================================== */
+
+function getAppearDays(
+    history,
+    number
+){
+
+    const result=[];
+
+    history.forEach((day,index)=>{
+
+        if(
+            getTails(day)
+            .includes(number)
+        ){
+            result.push(index);
+        }
+    });
+
+    return result;
+}
+
+
+/* =====================================================
+CHU KỲ
+===================================================== */
+
+function calculateCycleData(
+    history,
+    number
+){
+
+    const days=
+        getAppearDays(
+            history,
+            number
+        );
+
+    if(days.length<3){
+
+        return{
+            cycle:0,
+            gap:0,
+            stability:0
+        };
+    }
+
+    const gaps=[];
+
+    for(let i=1;i<days.length;i++){
+
+        gaps.push(
+            days[i]-
+            days[i-1]
+        );
+    }
+
+    const average=
+        gaps.reduce(
+            (a,b)=>a+b,
+            0
+        )/
+        gaps.length;
+
+    if(
+        !Number.isFinite(average) ||
+        average<=0
+    ){
+
+        return{
+            cycle:0,
+            gap:0,
+            stability:0
+        };
+    }
+
+    let variance=0;
+
+    gaps.forEach(g=>{
+        variance+=
+            Math.pow(
+                g-average,
+                2
+            );
+    });
+
+    variance/=
+        gaps.length;
+
+    const deviation=
+        Math.sqrt(
+            Math.max(
+                variance,
+                0
+            )
+        );
+
+    const stability=
+        1/
+        (
+            1+
+            deviation
+        );
+
+    const currentGap=
+        history.length-1-
+        days[days.length-1];
+
+    const difference=
+        Math.abs(
+            currentGap-
+            average
+        );
+
+    const cycle=
+        1/
+        (
+            1+
+            difference
+        );
+
+    const ratio=
+        currentGap/
+        average;
+
+    const gap=
+        Math.exp(
+            -Math.abs(
+                ratio-1
+            )
+        );
+
+    return{
+        cycle:
+            Number.isFinite(cycle)
+            ?cycle
+            :0,
+
+        gap:
+            Number.isFinite(gap)
+            ?gap
+            :0,
+
+        stability:
+            Number.isFinite(stability)
+            ?stability
+            :0
+    };
+}
+
+
+/* =====================================================
+TÍNH HYBRID MODEL
+===================================================== */
+
+function calculateHybrid(history){
+
+    if(
+        !Array.isArray(history) ||
+        history.length===0
+    ){
+        return{
+            hot:[],
+            cycle:[],
+            all:[]
+        };
+    }
+
+    const map=createMap();
+
+    for(let i=0;i<100;i++){
+
+        const number=
+            String(i).padStart(2,"0");
+
+        map[number].momentum=
+            calculateMomentum(
+                history,
+                number
+            );
+
+        map[number].recent=
+            calculateRecent(
+                history,
+                number
+            );
+
+        map[number].trend=
+            calculateTrend(
+                history,
+                number
+            );
+
+        const cycleData=
+            calculateCycleData(
+                history,
+                number
+            );
+
+        map[number].cycle=
+            cycleData.cycle;
+
+        map[number].gap=
+            cycleData.gap;
+
+        map[number].stability=
+            cycleData.stability;
+    }
+
+    normalize(map,"momentum");
+    normalize(map,"recent");
+    normalize(map,"trend");
+
+    normalize(map,"cycle");
+    normalize(map,"gap");
+    normalize(map,"stability");
+
+
+    Object.values(map).forEach(item=>{
+
+        item.hotScore=
+
+            item.momentum*.45+
+
+            item.recent*.35+
+
+            item.trend*.20;
+
+
+        item.cycleScore=
+
+            item.cycle*.45+
+
+            item.gap*.35+
+
+            item.stability*.20;
+
+    });
+
+
+    const all=
+        Object.values(map)
+        .filter(item=>
+            item &&
+            typeof item.number==="string"
+        );
+
+
+    const hotCandidates=
+        [...all]
+        .sort(
+            (a,b)=>
+                b.hotScore-
+                a.hotScore
+        );
+
+
+    const hot=[];
+
+    for(const item of hotCandidates){
+
+        if(hot.length>=3){
+            break;
+        }
+
+        if(
+            item.hotScore<=0 ||
+            hot.some(
+                x=>x.number===item.number
+            )
+        ){
+            continue;
+        }
+
+        hot.push({
+            ...item,
+            type:"HOT",
+            score:item.hotScore
+        });
+    }
+
+
+    /* Nếu ít số có điểm HOT > 0,
+       vẫn lấy tiếp để đủ 3 */
+
+    if(hot.length<3){
+
+        for(const item of hotCandidates){
+
+            if(hot.length>=3){
+                break;
+            }
+
+            if(
+                hot.some(
+                    x=>x.number===item.number
+                )
+            ){
+                continue;
+            }
+
+            hot.push({
+                ...item,
+                type:"HOT",
+                score:item.hotScore
+            });
+        }
+    }
+
+
+    const used=
+        new Set(
+            hot.map(
+                x=>x.number
+            )
+        );
+
+
+    const cycleCandidates=
+        [...all]
+        .filter(
+            item=>
+                !used.has(
+                    item.number
+                )
+        )
+        .sort(
+            (a,b)=>
+                b.cycleScore-
+                a.cycleScore
+        );
+
+
+    const cycle=[];
+
+    for(const item of cycleCandidates){
+
+        if(cycle.length>=3){
+            break;
+        }
+
+        cycle.push({
+            ...item,
+            type:"CYCLE",
+            score:item.cycleScore
+        });
+    }
+
+
+    const finalHot=
+        hot
+        .filter(
+            x=>x && x.number
+        )
+        .slice(0,3);
+
+
+    const finalCycle=
+        cycle
+        .filter(
+            x=>x && x.number
+        )
+        .slice(0,3);
+
+
+    return{
+        hot:finalHot,
+        cycle:finalCycle,
+        all:[
+            ...finalHot,
+            ...finalCycle
+        ]
+    };
+}
+
+
+/* =====================================================
+RENDER TOP
+===================================================== */
+
+function renderItems(
+    items,
+    container,
+    type
+){
+
+    let html="";
+
+    items.forEach((item,index)=>{
+
+        if(
+            !item ||
+            !item.number
+        ){
+            return;
+        }
+
+        const className=
+            type==="HOT"
+            ?"hot-item"
+            :"cycle-item";
+
+        const label=
+            type==="HOT"
+            ?"🔥 HOT"
+            :"🔄 CYCLE";
+
+        const typeClass=
+            type==="HOT"
+            ?"hot"
+            :"cycle";
+
+        html+=`
+
+            <div class="top-item ${className}">
+
+                <div class="type ${typeClass}">
+                    ${label} ${index+1}
+                </div>
+
+                <div class="number">
+                    ${item.number}
+                </div>
+
+                <div class="small">
+                    Điểm:
+                    ${Number(item.score).toFixed(3)}
+                </div>
+
+            </div>
+        `;
+    });
+
+    document.getElementById(
+        container
+    ).innerHTML=
+        html ||
+        "Không có kết quả.";
+}
+
+
+/* =====================================================
+PHÂN TÍCH
+===================================================== */
+
+function analyze(){
+
+    try{
+
+        const days=getDays();
+
+        if(days.length<20){
+
+            throw new Error(
+                "Nên có ít nhất 20 ngày dữ liệu."
+            );
+        }
+
+        const invalid=
+            days.filter(
+                d=>d.numbers.length!==27
+            );
+
+        if(invalid.length>0){
+
+            throw new Error(
+                `Có ${invalid.length} ngày chưa đủ 27 giải.`
+            );
+        }
+
+        const result=
+            calculateHybrid(days);
+
+        if(
+            result.hot.length!==3 ||
+            result.cycle.length!==3
+        ){
+
+            throw new Error(
+                "Không tạo đủ Top 6."
+            );
+        }
+
+        renderItems(
+            result.hot,
+            "hotResult",
+            "HOT"
+        );
+
+        renderItems(
+            result.cycle,
+            "cycleResult",
+            "CYCLE"
+        );
+
+
+        let totalHTML="";
+
+        result.all.forEach((item,index)=>{
+
+            totalHTML+=`
+
+                <div class="top-item">
+
+                    <div class="type">
+                        ${item.type==="HOT"
+                            ?"🔥 HOT"
+                            :"🔄 CYCLE"}
+                    </div>
+
+                    <div class="rank">
+                        TOP ${index+1}
+                    </div>
+
+                    <div class="number">
+                        ${item.number}
+                    </div>
+
+                </div>
+            `;
+        });
+
+        document.getElementById(
+            "topResult"
+        ).innerHTML=totalHTML;
+
+
+        let detail="";
+
+        result.all.forEach((item,index)=>{
+
+            detail+=`
+
+                <tr>
+
+                    <td>
+                        ${item.type}
+                    </td>
+
+                    <td>
+                        ${index+1}
+                    </td>
+
+                    <td>
+                        <b>${item.number}</b>
+                    </td>
+
+                    <td>
+                        ${Number(item.score).toFixed(3)}
+                    </td>
+
+                    <td>
+                        ${item.momentum.toFixed(3)}
+                    </td>
+
+                    <td>
+                        ${item.recent.toFixed(3)}
+                    </td>
+
+                    <td>
+                        ${item.trend.toFixed(3)}
+                    </td>
+
+                    <td>
+                        ${item.cycle.toFixed(3)}
+                    </td>
+
+                    <td>
+                        ${item.gap.toFixed(3)}
+                    </td>
+
+                    <td>
+                        ${item.stability.toFixed(3)}
+                    </td>
+
+                </tr>
+            `;
+        });
+
+        document.getElementById(
+            "detailResult"
+        ).innerHTML=detail;
+
+
+        setStatus(
+            "Đã phân tích Top 6 Hybrid thành công.",
+            "success"
+        );
+
+    }catch(error){
+
+        setStatus(
+            "Lỗi phân tích: "+
+            error.message,
+            "error"
+        );
+    }
+}
+
+
+/* =====================================================
+ĐẾM NHÁY THỰC TẾ
+===================================================== */
+
+function countActualTails(day){
+
+    const counts={};
+
+    getTails(day)
+    .forEach(tail=>{
+
+        counts[tail]=
+            (
+                counts[tail]||0
+            )+1;
+    });
+
+    return counts;
+}
+
+
+/* =====================================================
+BACKTEST
+===================================================== */
+
+function backtest(){
+
+    try{
+
+        const days=getDays();
+
+        if(days.length<25){
+
+            throw new Error(
+                "Cần ít nhất 25 ngày dữ liệu."
+            );
+        }
+
+        const invalid=
+            days.filter(
+                d=>d.numbers.length!==27
+            );
+
+        if(invalid.length>0){
+
+            throw new Error(
+                `Có ${invalid.length} ngày chưa đủ 27 giải.`
+            );
+        }
+
+
+        const MIN_HISTORY=20;
+
+        let tests=0;
+        let totalHits=0;
+
+        let zeroDays=0;
+        let oneDays=0;
+        let twoPlus=0;
+
+        let currentZero=0;
+        let maxZero=0;
+
+        let rows="";
+
+
+        for(
+            let targetIndex=MIN_HISTORY;
+            targetIndex<days.length;
+            targetIndex++
+        ){
+
+            const history=
+                days.slice(
+                    0,
+                    targetIndex
+                );
+
+            const actual=
+                days[targetIndex];
+
+            const result=
+                calculateHybrid(
+                    history
+                );
+
+            const predicted=
+                result.all
+                .filter(
+                    item=>
+                        item &&
+                        typeof item.number==="string"
+                )
+                .map(
+                    item=>item.number
+                );
+
+
+            if(predicted.length!==6){
+                continue;
+            }
+
+
+            const counts=
+                countActualTails(
+                    actual
+                );
+
+            let hits=0;
+
+            const hitText=[];
+
+
+            predicted.forEach(number=>{
+
+                const count=
+                    counts[number]||0;
+
+                if(count>0){
+
+                    hits+=count;
+
+                    hitText.push(
+                        `${number} ×${count}`
+                    );
+                }
+            });
+
+
+            tests++;
+
+            totalHits+=hits;
+
+
+            if(hits===0){
+
+                zeroDays++;
+
+                currentZero++;
+
+                maxZero=
+                    Math.max(
+                        maxZero,
+                        currentZero
+                    );
+
+            }else{
+
+                currentZero=0;
+            }
+
+
+            if(hits===1){
+                oneDays++;
+            }
+
+            if(hits>=2){
+                twoPlus++;
+            }
+
+
+            rows+=`
+
+                <tr>
+
+                    <td>${tests}</td>
+
+                    <td>
+                        Ngày 1 → ${targetIndex}
+                    </td>
+
+                    <td>
+                        Ngày ${targetIndex+1}
+                    </td>
+
+                    <td>
+                        ${predicted.join(" - ")}
+                    </td>
+
+                    <td class="actual">
+                        ${getTails(actual).join(" - ")}
+                    </td>
+
+                    <td>
+                        ${
+                            hitText.length
+                            ?hitText.join(", ")
+                            :"Không trùng"
+                        }
+                    </td>
+
+                    <td>
+                        <b>${hits}</b>
+                    </td>
+
+                </tr>
+            `;
+        }
+
+
+        if(tests===0){
+
+            throw new Error(
+                "Không có lần Backtest hợp lệ."
+            );
+        }
+
+
+        const average=
+            totalHits/tests;
+
+        const onePlus=
+            tests-zeroDays;
+
+        const onePlusRate=
+            (
+                onePlus/tests*100
+            )
+            .toFixed(1);
+
+        const twoPlusRate=
+            (
+                twoPlus/tests*100
+            )
+            .toFixed(1);
+
+
+        document.getElementById(
+            "backtestResult"
+        ).innerHTML=`
+
+            <div class="grid">
+
+                <div class="stat">
+                    Tổng lần Backtest
+                    <strong>${tests}</strong>
+                </div>
+
+                <div class="stat">
+                    Tổng số nháy
+                    <strong>${totalHits}</strong>
+                </div>
+
+                <div class="stat">
+                    Trung bình
+                    <strong>${average.toFixed(2)}</strong>
+                    nháy / lần
+                </div>
+
+                <div class="stat">
+                    Số ngày 0 nháy
+                    <strong>${zeroDays}</strong>
+                </div>
+
+                <div class="stat">
+                    Số ngày 1 nháy
+                    <strong>${oneDays}</strong>
+                </div>
+
+                <div class="stat">
+                    Từ 2 nháy trở lên
+                    <strong>${twoPlus}</strong>
+                    (${twoPlusRate}%)
+                </div>
+
+                <div class="stat">
+                    Tỷ lệ ≥1 nháy
+                    <strong>${onePlusRate}%</strong>
+                </div>
+
+                <div class="stat">
+                    Chuỗi 0 dài nhất
+                    <strong>${maxZero}</strong>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="info">
+
+                <b>Quy tắc Backtest Hybrid:</b><br>
+
+                Mỗi lần dự đoán chỉ dùng dữ liệu cũ hơn ngày kiểm tra.<br>
+
+                Top 6 gồm:
+                <b>3 HOT + 3 CYCLE</b>.<br>
+
+                Phân tích dùng toàn bộ 27 giải.<br>
+
+                Kiểm tra trùng chỉ dùng 2 số cuối của 27 giải.<br>
+
+                Một số xuất hiện 2 lần trong 27 đuôi
+                được tính 2 nháy.
+
+            </div>
+
+            <br>
+
+            <div class="scroll">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Lần</th>
+                            <th>Dữ liệu dùng</th>
+                            <th>Ngày kiểm tra</th>
+                            <th>Top 6 Hybrid</th>
+                            <th>27 đuôi thực tế</th>
+                            <th>Số trùng</th>
+                            <th>Nháy</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                        ${rows}
+                    </tbody>
+
+                </table>
+
+            </div>
+        `;
+
+
+        setStatus(
+            "Backtest Hybrid hoàn tất.",
+            "success"
+        );
+
+    }catch(error){
+
+        setStatus(
+            "Lỗi Backtest: "+
+            error.message,
+            "error"
+        );
+    }
+}
+
+
+/* =====================================================
+XÓA
+===================================================== */
+
+function clearAll(){
+
+    document.getElementById(
+        "inputData"
+    ).value="";
+
+    document.getElementById(
+        "status"
+    ).innerHTML="";
+
+    document.getElementById(
+        "preview"
+    ).innerHTML=
+        "Chưa kiểm tra dữ liệu.";
+
+    document.getElementById(
+        "hotResult"
+    ).innerHTML=
+        "Chưa phân tích.";
+
+    document.getElementById(
+        "cycleResult"
+    ).innerHTML=
+        "Chưa phân tích.";
+
+    document.getElementById(
+        "topResult"
+    ).innerHTML=
+        "Chưa phân tích.";
+
+    document.getElementById(
+        "detailResult"
+    ).innerHTML=
+        `<tr>
+            <td colspan="10">
+                Chưa phân tích
+            </td>
+        </tr>`;
+
+    document.getElementById(
+        "backtestResult"
+    ).innerHTML=
+        "Chưa chạy Backtest.";
+
+    document.getElementById(
+        "infoArea"
+    ).innerHTML=
+        `<div class="stat">
+            Chưa có dữ liệu
+        </div>`;
+}
+
+</script>
+
+</body>
+</html>
